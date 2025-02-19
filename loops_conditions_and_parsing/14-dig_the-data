@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Groups and sorts Apache log data
+awk '{print $1 " " $9}' apache-access.log | sort | uniq -c | sort -rn
